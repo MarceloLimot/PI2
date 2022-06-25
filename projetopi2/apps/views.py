@@ -7,3 +7,15 @@ def teste(request):
 
 def inicio(request):
     return render(request,'apps/index.html')
+
+def login(request):
+    return render(request,'apps/login.html')    
+
+def base(request):
+    return render(request, 'templates/base.html')
+
+def sobre(request):
+    return render(request, 'apps/sobre.html')
+
+def adminarea(request):
+    return render(request, 'apps/adminarea.html')
