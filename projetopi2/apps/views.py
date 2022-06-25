@@ -19,3 +19,6 @@ def sobre(request):
 
 def adminarea(request):
     return render(request, 'apps/adminarea.html')
+
+def profissionais(request):
+    return render(request, 'apps/profissionais.html')

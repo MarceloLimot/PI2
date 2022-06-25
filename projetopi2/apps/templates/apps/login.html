@@ -7,7 +7,7 @@
 <div class="login">
     <div class="titulo1">Login<br></div>
     <form method="post">
-        <div class="centralizador">
+        <div class="centralizador2">
             <div class="text-center">
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}">
@@ -28,10 +28,11 @@
                     <button class="btn btn-entrar" type="button" onclick="">Entrar</button>
                 </div>
             </div>
+            <div class="text-center">
+                <p class="change-form-p"> Ainda não possui cadastro?<a href="/register"> Clique aqui.</a></p>
+            </div>
         </div>
-        <div class="text-center">
-            <p class="change-form-p"> Ainda não possui cadastro?<a href="/accounts/register"> Clique aqui.</a></p>
-        </div>
+        
         
     </form>
 </div>

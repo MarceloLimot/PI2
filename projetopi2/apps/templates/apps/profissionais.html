@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Area Administrativa {% endblock %}
+
+{% block content%}
+
+<section id="conteudo">
+    <div class="geral3">
+        <div class="titulo5">Escolha o tipo de <br>profissional que busca: </div>
+        <div class="text-center">
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-Prof" type="button"> <img src= "{% static 'img/assistencia.png' %}" height="60" widht="60"> Assistência <br>Tecnica</button>
+                <button class="btn btn-Prof" type="button" onclick="listaDonat()"><img src= "{% static 'img/professor.png' %}" height="60" widht="60">Professor</button>
+                <button class="btn btn-Prof" type="button" onclick="listaDoador()"><img src= "{% static 'img/mecanico.png' %}" height="60" widht="60">Mecanico</button>
+            </div><br>
+
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-Prof" type="button" onclick=""><img src= "{% static 'img/consultor.png' %}" height="60" widht="60">Consultoria</button>
+                <button class="btn btn-Prof" type="button" onclick=""><img src= "{% static 'img/tecnologia.png' %}" height="60" widht="60">Tecnologia</button>
+                <button class="btn btn-Prof" type="button"><img src= "{% static 'img/garcom.png' %}" height="60" widht="60">Eventos</button>
+            </div><br>
+
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-Prof" type="button" onclick=""><img src= "{% static 'img/barbeiro.png' %}" height="60" widht="60"><br>Moda e<br>Beleza</button>
+                <button class="btn btn-Prof" type="button"><img src= "{% static 'img/reparos.png' %}" height="60" widht="60">Reparos e<br>Reformas</button>
+                <button class="btn btn-Prof" type="button" onclick=""><img src= "{% static 'img/saude.png' %}" height="60" widht="60">Saude</button>
+            </div><br>
+
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-Prof" type="button"><img src= "{% static 'img/empregada.png' %}" height="60" widht="60">Serviços<br>Domesticos</button>
+                <button class="btn btn-Prof" type="button" onclick=""><img src= "{% static 'img/motociclista.png' %}" height="60" widht="60">Motociclista</button>
+                <button class="btn btn-Prof" type="button" onclick="sair()"><img src= "{% static 'img/sair.png' %}" height="60" widht="60">Sair</button>
+            </div><br>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
