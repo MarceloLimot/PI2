@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Profissional: {{task.nome}} {% endblock %}
+
+{% block content%}
+<div class="geral3">
+    <div class="texto2"> {{LoginPrestador.nome}}<br></div>
+    <form method="POST">
+        {% csrf_token %}
+        <!--{{ form.as_p }}-->
+        <div class="dadospessoais">
+            <div class="texto4">
+                Dados de Contato:<br><br>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Nome</span>
+                <input type="text" class="form-control" value="{{task.nome}}" id='nome' name='nome' disabled>
+            </div>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text">Telefone</span>
+                <input type="text" class="form-control" value="{{task.telefone}}" id='telefone' name='telefone' disabled>
+            </div>
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input type="text" class="form-control" value="{{task.email}}" id='email' name='email' disabled>
+            </div>
+        </div>
+        
+
+        <div class="dadospessoais">
+
+            <div class="centralizador">
+                <div class="text-center">
+                        <button class="btn btn-entrar" type="button"  disabled="true" visible="false">Editar</button>
+                        <button class="btn btn-entrar" type="button" onclick="sairAdmin()" >Voltar</button>
+                </div>
+            </div>
+        </div>  
+        
+    </form>
+</div>
+{% endblock %}

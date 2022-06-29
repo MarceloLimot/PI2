@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baselogin.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -23,7 +23,7 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text">Senha</span>
                     <input type="password" name="password1" class="form-control" 
-                    autocomplete="new-password" required id="id_password1"
+                    autocomplete="new-password" required id="id_password1"  minlength="8"
                     data-toggle="tooltip" title="Sua Senha deve conter no minimo 8 caracteres e não possuir apenas numeros!">          
                 </div>
 
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="d-grid gap-1 d-md-block">
-                    <button class="btn btn-entrar" type="submit" Value="Save" name="_save">Cadastrar</button>
+                    <button class="btn btn-entrar" type="submit" Value="Save" name="_save" required id="cadastrar">Cadastrar</button>
                     <button class="btn btn-entrar" type="button" onclick="sair()">Sair</button>
                 </div>
             </div>

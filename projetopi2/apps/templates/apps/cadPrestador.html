@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Cadastro de Prestador {% endblock %}
+
+{% block content%}
+<section id="conteudo">
+    <div class="geral">  
+        
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="titulo2">Cadastro de Prestador</div>
+        
+            <div class="dadospessoais">
+                <div class="texto4">
+                    Insira Abaixo as informações:
+                </div>
+    
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Nome</span>
+                    <input type="text" class="form-control" id='nome' name='nome'>
+                </div>
+        
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Telefone</span>
+                    <input type="text" class="form-control cel-sp-mask" id='telefone' name='telefone' placeholder="telefone">
+                </div>
+                  
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="text" class="form-control" id='email' name='email' placeholder="Ex.: exemplo@exemplo.com">
+                </div>
+        
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Senha</span>
+                    <input type="password" class="form-control" id="senha" name='senha'>
+                    <span class="input-group-text" id="olho"><i class="fas fa-eye"></i></span>
+                </div>
+            </div>
+            
+            <div class="dadospessoais">
+                <div class="texto4">
+                    Endereço:
+                </div>
+        
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Cep°</span>
+                    <input type="text" class="form-control" id='cep' name='cep' placeholder="Ex.: 00000-000" data-mask="00000-000" maxlength="9">
+                    <span class="input-group-text">N°</span>
+                    <input type="text" class="form-control" id='numero' name='numero'>
+                    
+                </div>
+        
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Complemento</span>
+                    <input type="text" class="form-control" id='complemento' name='complemento'>
+                    <span class="input-group-text">Profissional</span>
+                    <select class="form-control" name='profissional' id='profissional'>
+                        <option>Assistencia Tecnica</option>
+                        <option>Professor</option>
+                        <option>Mecanico</option>
+                        <option>Consultoria</option>
+                        <option>Tecnologia</option>
+                        <option>Eventos</option>
+                        <option>Beleza</option>
+                        <option>Reparos</option>
+                        <option>Saude</option>
+                        <option>Domestico</option>
+                        <option>Motociclista</option>
+                    </select>
+                    
+                </div>
+                <div class="centralizador">
+                    <div class="text-center">
+                            <input type="submit" class="btn btn-entrar" value="Cadastrar">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        
+    </div>
+</section>
+{% endblock %}

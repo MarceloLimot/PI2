@@ -121,7 +121,7 @@
   
 
   .dadospessoais{
-    border: orange 1px solid;
+    border: rgb(0, 217, 255) 1px solid;
     border-radius: 10px;
     background-color:#000000;
     color:rgb(255, 255, 255);
@@ -135,6 +135,8 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+
   
   .login{
     border: rgb(0, 0, 0) 1px solid;
@@ -216,6 +218,18 @@
     height: 850px;
     width: 800px;
     margin-top:50PX;
+    margin-bottom:100PX;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .geral5{
+    border: rgb(0, 0, 0) 1px solid;
+    background-color: #7a7a7a8e;
+    border-radius: 5px;
+    height: 800px;
+    width: 65vW;
+    margin-top:40PX;
     margin-bottom:100PX;
     margin-left: auto;
     margin-right: auto;
@@ -410,6 +424,16 @@
     background-color:lightsteelblue;
   }
 
+  .form-control2{
+    background-color:rgb(212, 212, 212);
+    height:5vh;
+    width: 4vw;
+  }
+
+  .form-control2:focus{
+    background-color:rgb(212, 212, 212);
+  }
+
   .input-group-text{
     height:5vh;
     background-color:rgb(238, 238, 238);
@@ -465,21 +489,21 @@
   }
   
   .btn-entrar{
-    background-color:#DAA520;
+    background-color:#62b7df;
     font-family:Helvetica;
     font-size: 100%;
     border-radius: 20px;
     width:30%;
     height:5vh;
-    border-color: #DAA520;
-    color:white;
+    border-color: #000000;
+    color:rgb(0, 0, 0);
     margin-bottom: 10px;
   }
   
   .btn-entrar:hover {
-    color: #000000;
-    background-color: #f5d479;
-    border-color: #DAA520;
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #2086da;
   }
 
   .btn-cadastrar{
@@ -721,6 +745,18 @@
   .link_rodape:hover{
     text-decoration: none;
     color:#000000;
+  }
+
+  .link_lista{
+    text-decoration: none;
+    color:#000000;
+    font-weight: bold;
+    font-size:20px; 
+  }
+
+  .link_lista:hover{
+    color:#000000;
+    text-decoration: none;
   }
   
   .imagemfundo{

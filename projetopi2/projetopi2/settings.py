@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps',
+    'crispy_forms',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -79,10 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bdpi2',
-        'USER':'root',
-        'PASSWORD':'1234'
-        #'HOST':'127.0.0.1',
-        #'PORT':'3306'
+        'USER': 'root',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
@@ -107,14 +109,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+# https://docs.djangoproject.com/en/1.11/topics/i18n/
+LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 
@@ -125,9 +124,9 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = '/adminarea'
+LOGIN_REDIRECT_URL = '/profissionais'
 
-LOGOUT_REDIRECT_URL = '/login'
+LOGOUT_REDIRECT_URL = '/accounts/login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
