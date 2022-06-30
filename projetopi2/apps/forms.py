@@ -7,4 +7,3 @@ class LoginPrestadorForm(forms.ModelForm):
         model = LoginPrestador
         fields = ('nome','telefone','email','senha','cep','numero',
         'complemento','profissional')
-

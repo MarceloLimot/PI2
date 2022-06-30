@@ -46,8 +46,12 @@ function editFunc(){
 
 
 //----------Funções de Edição----------\\ 
-function deleteFunc(){
-    window.location = "deleteFunc"
+function deletePrestador(){
+    window.location = "deletePrestador"
+}
+
+function deleteDonat(){
+    window.location = "deletePrestador"
 }
 
 
@@ -95,22 +99,5 @@ function areaAdmin(){
         else{
             window.location.replace("areadoador")
         }
-    }
-}
-
-function listaPrestador(profissao){
-    switch(profissao){
-        case 'mecanico':
-            return window.location ="listaPrestadorMec";
-            break;
-        case 'professor':
-            return window.location ="listaProfessor";
-            break;
-        case 'tecnologia':
-            return window.location ="listaTecnologia";
-            break;
-        case 'saude':
-            return window.location = "listaSaude";
-            break;
     }
 }

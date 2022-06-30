@@ -34,8 +34,9 @@
 
             <div class="centralizador">
                 <div class="text-center">
-                        <button class="btn btn-entrar" type="button"  disabled="true" visible="false">Editar</button>
-                        <button class="btn btn-entrar" type="button" onclick="sairAdmin()" >Voltar</button>
+                        <a href="http://localhost:8000/editPrestador/{{task.id}}"><button class="btn btn-entrar" type="button">Editar</button></a>
+                        <a href="http://localhost:8000/deletePrestador/{{task.id}}"><input type="button" onclick="deletePrestador()" class="btn btn-entrar" value="Excluir"></a>
+                        <button class="btn btn-entrar" type="button" onclick="sairAdmin()">Sair</button></span>
                 </div>
             </div>
         </div>  

@@ -124,15 +124,30 @@ def prestador(request, id):
         return render(request,'apps/prestador.html',{'form': form, 'task':nome})
 #---------------/Fim da funcao de cadastro de Prestador\---------------#
 
+#----------------/Função para editar prestador\------------------#
+@login_required
+def editPrestador(request, id): 
+    func = get_object_or_404(LoginPrestador, pk=id)
+    form = LoginPrestadorForm(instance=func)
 
+    if request.method == 'POST':
+        form = LoginPrestadorForm(request.POST, instance=func)
+
+        if(form.is_valid()):
+            func.save()
+            return redirect('/profissionais')  
+        else:
+            return render(request,'apps/editPrestador.html',{'form': form, 'task':func})                  
+    else:
+        return render(request,'apps/editPrestador.html',{'form': form, 'task':func})
 
 ########################################################################
                             #Deletar Logins#
 ########################################################################
 #------------------/funcao para delete de Funcionario\------------------#
 @login_required
-def deleteFunc(request, id):
+def deletePrestador(request, id):
     func = get_object_or_404(LoginPrestador, pk=id)
     func.delete()
-    return render(request,'apps/prestador.html',{'form': form, 'task':nome}) 
+    return redirect('/profissionais')
 #---------------/Fim da funcao para delete de Funcionario\---------------#

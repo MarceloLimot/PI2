@@ -1,4 +1,8 @@
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .container-fluid{
     padding: 0px;
     background-color: #ffffff0a;
@@ -758,6 +762,19 @@
     color:#000000;
     text-decoration: none;
   }
+
+  .lista2{
+    text-align: right;
+    text-decoration: none;
+    color:#000000;
+    font-weight: bold;
+    font-size:20px; 
+  }
+
+  .lista2:hover{
+    color:#000000;
+    text-decoration: none;
+  }
   
   .imagemfundo{
     height: 100%;
@@ -770,6 +787,13 @@
     text-align:justify;
     color:rgb(0, 0, 0);
     font-style: normal;
+    text-decoration: none;
+  }
+
+  .telefone{
+    text-align: right;
+    color:rgb(0, 0, 0);
+    font-style: bold;
     text-decoration: none;
   }
 

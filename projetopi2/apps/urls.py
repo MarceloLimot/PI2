@@ -14,6 +14,9 @@ urlpatterns = [
     path('profissionais', views.profissionais),
     path('cadPrestador', views.cadPrestador, name='cadPrestador'),
 
+    path('editPrestador/<int:id>',views.editPrestador),  
+
+    path('deletePrestador/<int:id>',views.deletePrestador, name='deletePrestador'),
 #-------------------------Listagem de Profissionais-------------------------------#
     path('listaPrestador', views.listaPrestador, name='listaPrestador'),
     path('listaAssistencia', views.listaAssistencia, name='listaAssistencia'),
